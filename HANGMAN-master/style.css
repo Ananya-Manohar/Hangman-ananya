@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    color: #eed;
+}
+
+.login-button{
+    text-align: right;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+/* background color */
+body{
+    background-image: linear-gradient( to right ,purple ,rgb(176, 59, 151));
+}
+
+/* aligning all headings to center */
+h1,h3{
+    text-align: center;
+}
+
+/* centering the contents of the game container */
+.game_container{
+    display: grid;
+    justify-content: center;
+    margin-top: 12vh;
+}
+
+/* adding border to hangman figure and the unknown word */
+.figure-keyboard{
+     margin-bottom: 15vh ;
+     display: flex;
+     /* background-color: antiquewhite; */
+}
+
+.figure-container{
+    margin-right:150px ;
+}
+
+
+/* designing keyboard of all alphabets */
+.keyboard{
+    background-color: rgb(216, 151, 199);
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.keyboard button{
+    width: 5.5rem;
+    height: 5.5rem;
+    color: black;
+    font-size: large;
+    background-color: yellow;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.keyboard button:hover{
+    opacity: 0.5;
+    background-color: rgb(218, 236, 22);
+    color: black;
+    /* background-color: blue; */
+}
+
+.row{
+    text-align: center;
+}
+.word{
+    text-align: center;
+    margin-bottom: 6vh ;
+}
+
+
+
+
+
+/* designing the slot for unknown word */
+.letter{
+    border-bottom: 3px solid white;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 0  0.5rem 0 0.5rem;
+    
+}
+
+/* designoing popup menu */
+.popup{
+    height: 25vh;
+    width: 25vw;
+    position: absolute;
+    background-color: rgb(145, 51, 228);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    border-radius: 5%;
+    border: 3px solid black;
+    display: none;
+    
+}
+.popup-close{
+    /* padding: 1rem; */
+    background-color: rgb(145, 51, 228);
+    margin-left: 95%;
+    /* border-radius: 50%; */
+    font-size: 1.2rem;
+    border: none;
+}
+
+.loginpop{
+    width: 40vw;
+   text-align: center;
+}
+
+.loginpop input{
+    margin: 20px;
+}
+.options-container {
+  text-align:center; 
+}
+.options-container div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2em 0 2.4em 0;
+}
+.options-container button {
+    padding: 0.6em 0 1.3em 0;
+    border: 3px solid #000;
+    color: #000;
+    border-radius: 0.3em;
+    text-transform: capitalize;
+
+}
+
+.options-container button:disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #efefef;
+}
+background-color button.active {
+    background-color: cadetblue;
+    border: 3px solid #000;
+    color: #000;
+}
