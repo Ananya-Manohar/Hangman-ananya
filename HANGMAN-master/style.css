@@ -19,21 +19,27 @@ h2{
 
 }
 .options-container{
-    justify-content: center;
+    transform: scale(1);
+    text-align: center;
 }
 
-.options {
+.options button {
     background-color: yellow;
-    border: 1px solid #000;
-    border-radius: 5px;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 7px;
     text-align: center;
     width: 100px;
     height: 50px;
-    margin-top: 10px;
     font-size: 17px;
     cursor: pointer;
 }
-.options:hover {
+.options {
+    text-align: center;
+    display: block;
+    margin: 5px;
+}
+.options button:hover {
     background-color: rgb(155, 145, 2);
 }
 /* centering the contents of the game container */
@@ -111,7 +117,7 @@ h2{
     transform: translate(-50% ,-50%);
     border-radius: 5%;
     border: 3px solid black;
-    display: none;
+    display: none
     
 }
 .popup.show{
@@ -120,7 +126,7 @@ h2{
 .popup-close1, .popup-close2{
     /* padding: 1rem; */
     background:transparent;
-    margin-left: 90%;
+    margin-left: 94%;
     /* border-radius: 50%; */
     font-size: 1.2rem;
     cursor: pointer;
@@ -139,47 +145,47 @@ h2{
 }
 
 .popup-loginpop{
-    width: 40vw;
-    text-align: center;
-    height: 30vh;
-    position: absolute;
-    background-color: rgb(145, 51, 228);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.333);
     transform: scale(0);
-    border-radius: 5%;
-    border: 3px solid black;
+}
+.popup-loginpop .login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    max-width: 400px;
+    height: 200px;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    background-color: rgb(179, 0, 255);
+    border: 2.5px solid rgb(0, 0, 0) ;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.571);
+    font-size: 20px;
+}
+.login input{
+    font-size: 17px;
 }
 
 .popup-loginpop.show{
     transform: scale(1);
 }
 
-.popup-loginpop input{
-    margin: 10px;
+.popup-loginpop .login input{
+    margin: 15px;
     color: #000;
 }
-.options-container {
-  text-align:center; 
-}
-.options-container div{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 1.2em 0 2.4em 0;
-}
-.options-container button {
-    padding: 0.6em 0 1.3em 0;
-    border: 3px solid #000;
-    color: #000;
-    border-radius: 0.3em;
-    text-transform: capitalize;
 
-}
 
-.options-container button:disabled {
-    border: 3px solid #808080;
-    color: #808080;
-    background-color: #efefef;
-}
+
+
 background-color button.active {
     background-color: cadetblue;
     border: 3px solid #000;
@@ -196,7 +202,5 @@ svg{
     transform: scale(0);
 }
 
-.options-container{
-    transform: scale(1);
-}
+
 
