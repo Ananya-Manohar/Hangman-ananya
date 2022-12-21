@@ -13,13 +13,16 @@
     <button class="login-button">Login</button>
     <!-- popup for login -->
     <div class="popup-loginpop">
-        <button class="popup-close2"><i class="fa-regular fa-circle-xmark"></i></button><br><br>
-        <span>Username : </span>
+        <div class="login">
+            <button class="popup-close2"><i class="fa-regular fa-circle-xmark"></i></button><br><br>
+            <span>Username : </span>
         
-        <input type="text" name="username" id="">
-        <br><br><br>
-        <span>password : </span>
-        <input type="password" name="" id="">
+            <input type="text" name="username" id="">
+            <br><br><br>
+            <span>Password : </span>
+            <input type="password" name="" id="">
+        </div>
+        
     </div>
     
     <!-- heading -->
@@ -48,7 +51,8 @@
                 <line id = "try9"  x1="140" y1="150" x2="120" y2="180" class="figure-part" stroke="black" stroke-width="3" />
                 <line id = "try10"  x1="140" y1="150" x2="160" y2="180" class="figure-part" stroke="black" stroke-width="3" /> 
             </svg>
-            
+                    <!-- the hidden word the user need to find  -->
+        <div class="word"></div>
             <!-- keyboard of all alphabets -->
             <div class="keyboard">
                 <div class="row">
@@ -85,12 +89,6 @@
                 </div>
             </div>
         </div>
-        <!-- the hidden word the user need to find  -->
-        <div class="word">
-            
-        </div>
-        <!-- shows all letters that has been tried and turned out to be wrong -->
-        
     </div>
 
     <!-- popup which will appear once all the tries are complted -->
