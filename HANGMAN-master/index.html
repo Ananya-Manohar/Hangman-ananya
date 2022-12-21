@@ -5,11 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hangman</title>
-        <link rel="stylesheet" href="style.css"><script src="hangman.js"></script> 
+        <link rel="stylesheet" href="style.css">
     </head>
 
 <body>
-    <a class="login-button" href="style.css" target="_blank">Login</a>
+
+    <button class="login-button">Login</button>
+    <!-- popup for login -->
+    <div class="popup-loginpop">
+        <button class="popup-close2"><i class="fa-regular fa-circle-xmark"></i></button><br><br>
+        <span>Username : </span>
+        
+        <input type="text" name="username" id="">
+        <br><br><br>
+        <span>password : </span>
+        <input type="password" name="" id="">
+    </div>
+    
     <!-- heading -->
     <h1>HANG MAN</h1>
     <br>
@@ -34,7 +46,8 @@
                 <line id = "try8"  x1="140" y1="120" x2="160" y2="100" class="figure-part" stroke="black" stroke-width="3" />
                 <!-- Legs -->
                 <line id = "try9"  x1="140" y1="150" x2="120" y2="180" class="figure-part" stroke="black" stroke-width="3" />
-                <line id = "try10"  x1="140" y1="150" x2="160" y2="180" class="figure-part" stroke="black" stroke-width="3" /> </svg>
+                <line id = "try10"  x1="140" y1="150" x2="160" y2="180" class="figure-part" stroke="black" stroke-width="3" /> 
+            </svg>
             
             <!-- keyboard of all alphabets -->
             <div class="keyboard">
@@ -83,23 +96,13 @@
     <!-- popup which will appear once all the tries are complted -->
     <!-- it should either show successfull or not successfull -->
     <div class="popup">
-        <button class="popup-close"><i class="fa-regular fa-circle-xmark"></i></button>
+        <button class="popup-close1"><i class="fa-regular fa-circle-xmark"></i></button>
         <button class="newgame"><i class="fa-solid fa-rotate-right"></i>New Game</button>
         <p id="result-text"></p>
     </div>
 
     
-
-    <!-- popup for login -->
-    <div class="popup loginpop">
-        <button class="popup-close"><i class="fa-regular fa-circle-xmark"></i></button>
-        <span>Username : </span>
-        
-        <input type="text" name="username" id="">
-        <br>
-        <span>password : </span>
-        <input type="password" name="" id="">
-    </div>
+    
     
     <!--Script-->
     <script src="https://kit.fontawesome.com/1fa3530753.js" crossorigin="anonymous"></script>
