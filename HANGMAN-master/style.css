@@ -4,11 +4,6 @@
     color: #eed;
 }
 
-.login-button{
-    text-align: right;
-    margin-right: 2px;
-    cursor: pointer;
-}
 
 /* background color */
 body{
@@ -16,10 +11,31 @@ body{
 }
 
 /* aligning all headings to center */
-h1,h3{
+h1,h3,h2{
     text-align: center;
 }
+h2{
+    color: rgb(160, 160, 146);
 
+}
+.options-container{
+    justify-content: center;
+}
+
+.options {
+    background-color: yellow;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.options:hover {
+    background-color: rgb(155, 145, 2);
+}
 /* centering the contents of the game container */
 .game_container{
     display: grid;
@@ -75,8 +91,6 @@ h1,h3{
 
 
 
-
-
 /* designing the slot for unknown word */
 .letter{
     border-bottom: 3px solid white;
@@ -86,7 +100,7 @@ h1,h3{
     
 }
 
-/* designoing popup menu */
+/* designing popup menu */
 .popup{
     height: 25vh;
     width: 25vw;
@@ -100,22 +114,48 @@ h1,h3{
     display: none;
     
 }
-.popup-close{
+.popup.show{
+    display: contents;
+}
+.popup-close1, .popup-close2{
     /* padding: 1rem; */
-    background-color: rgb(145, 51, 228);
-    margin-left: 95%;
+    background:transparent;
+    margin-left: 90%;
     /* border-radius: 50%; */
     font-size: 1.2rem;
+    cursor: pointer;
     border: none;
 }
-
-.loginpop{
-    width: 40vw;
-   text-align: center;
+.login-button{
+    text-align: center;
+    margin-right: 2px;
+    cursor: pointer;
+    color: #000;
+    height: 30px;
+    width: 50px;
+    background-color: yellow;
+    border: 2px solid #000;
+    border-radius: 4px;
 }
 
-.loginpop input{
-    margin: 20px;
+.popup-loginpop{
+    width: 40vw;
+    text-align: center;
+    height: 30vh;
+    position: absolute;
+    background-color: rgb(145, 51, 228);
+    transform: scale(0);
+    border-radius: 5%;
+    border: 3px solid black;
+}
+
+.popup-loginpop.show{
+    transform: scale(1);
+}
+
+.popup-loginpop input{
+    margin: 10px;
+    color: #000;
 }
 .options-container {
   text-align:center; 
@@ -145,3 +185,18 @@ background-color button.active {
     border: 3px solid #000;
     color: #000;
 }
+span {
+    color: yellow;
+    font-weight: 400;
+}
+.popup-close1 i ,.popup-close2 i:hover{
+    color: red;
+}
+svg{
+    transform: scale(0);
+}
+
+.options-container{
+    transform: scale(1);
+}
+
