@@ -32,14 +32,42 @@ popup = document.querySelector(".popup"),
 closebtn = document.querySelector(".popup-close1"),
 figure = document.querySelector("svg"),
 optionsContainer = document.querySelector(".options-container"),
+keys = document.querySelector(".keyboard button"),
+lettersContainer = document.querySelector(".keyboard"),
+wordContainer = document.querySelector(".word-container"),
 closeIcon = document.querySelector(".popup-close2");
+
+keys.addEventListener("click" , (keyValue) => {
+    keys.forEach((button) => {
+        if(button.innerText.toLowerCase() === keyValue) {
+            wordContainer.Write(keyValue);
+        }
+    });
+});
+
+const generateWord = (optionValue) => {
+    let optionButtons = document.querySelectorAll(".options");
+
+    optionButtons.forEach((button) => {
+        if(button.innerText.toLowerCase() === optionValue) {
+            button.classList.add("active");
+        }
+        button.disabled = true;
+    });
+};
+/*
+let randNum = Math.floor(Math.random() * generateWord.length);
+let chosenWord = generateWord[randNum];
+console.log(chosenWord);
+*/
+
 
 const displayOptions = () => {
     optionsContainer.innerHTML += `<h2>Please Select An Option</h2>`;
 
     let buttonCon = document.createElement("div");
     for (let value in options) {
-        buttonCon.innerHTML += `<button class="options" onclick="generateWord('${value}')">${value}</button>`;
+        buttonCon.innerHTML += `<div class="options"><button onclick="generateWord('${value}')">${value}</button><div>`;
     }
 
     optionsContainer.appendChild(buttonCon);
@@ -64,3 +92,45 @@ closebtn.addEventListener("click" , () => {
     popupLogin.classList.remove("show");
 });
 
+
+
+//New Game Container popup
+document.querySelector(".popuponl .popup-close1").addEventListener("click" , () => {
+    document.querySelector(".popup").style.display = "none";
+});
+
+document.querySelector(".popuponl .newgame").addEventListener("click" , () => {
+    document.querySelector(".popup").style.display = "none";
+})
+
+document.querySelector(".popupWin .popup-close1").addEventListener("click" , () => {
+    document.querySelector(".popup1").style.display = "none";
+});
+
+document.querySelector(".popupWin .newgame").addEventListener("click" , () => {
+    document.querySelector(".popup1").style.display = "none";
+})
+
+document.querySelector(".popupLose .popup-close1").addEventListener("click" , () => {
+    document.querySelector(".popup2").style.display = "none";
+});
+
+document.querySelector(".popupLose .newgame").addEventListener("click" , () => {
+    document.querySelector(".popup2").style.display = "none";
+})
+
+//Getting the value of the key that is pressed on the keyboard
+
+
+const output = document.querySelector(".lettersGuessed");
+const input = document.querySelector(".keyboard button");
+
+
+input.addEventListener('keydown' , (e) => {
+    for(e.keycode ; 65 <= e.keycode <= 90; e.keycode++){
+        if(input === e.keycode){
+            output.Write(e.keyValue);
+        }
+        
+    }
+});
