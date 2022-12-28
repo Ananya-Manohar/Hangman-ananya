@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/1fa3530753.js" crossorigin="anonymous"></script>    
         <title>Hangman</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -14,7 +15,7 @@
     <!-- popup for login -->
     <div class="popup-loginpop">
         <div class="login">
-            <button class="popup-close2"><i class="fa-regular fa-circle-xmark"></i></button><br><br>
+            <button class="popup-close2"><i class="fa-regular fa-circle-xmark"></i></button><br>
             <span>Username : </span>
         
             <input type="text" name="username" id="">
@@ -32,6 +33,7 @@
     <div class="options-container"></div>
     <!-- body of the game -->
     <div class="game_container">
+        <br><br><br><br>
         <div class="figure-keyboard">
             <!-- svg for making the hanging man body -->
             <svg height="250px" width="200" class="figure-container">
@@ -51,59 +53,79 @@
                 <line id = "try9"  x1="140" y1="150" x2="120" y2="180" class="figure-part" stroke="black" stroke-width="3" />
                 <line id = "try10"  x1="140" y1="150" x2="160" y2="180" class="figure-part" stroke="black" stroke-width="3" /> 
             </svg>
-                    <!-- the hidden word the user need to find  -->
+                    
         <div class="word"></div>
-            <!-- keyboard of all alphabets -->
-            <div class="keyboard">
-                <div class="row">
-                    <button id="1">A</button>
-                    <button id="2">B</button>
-                    <button id="3">C</button>
-                    <button id="4">D</button>
-                    <button id="5">E</button>
-                    <button id="6">F</button>
-                    <button id="7">G</button>
-                    <button id="8">H</button>
-                </div>
-                <div class="row">
-                    <button id="9">I</button>
-                    <button id="10">J</button>
-                    <button id="11">K</button>
-                    <button id="12">L</button>
-                    <button id="13">M</button>
-                    <button id="14">N</button>
-                    <button id="15">O</button>
-                    <button id="16">P</button>
-                </div>
-                <div class="row">
-                    <button id="17">Q</button>
-                    <button id="18">R</button>
-                    <button id="19">S</button>
-                    <button id="20">T</button>
-                    <button id="21">U</button>
-                    <button id="22">V</button>
-                    <button id="23">W</button>
-                    <button id="24">X</button>
-                    <button id="25">Y</button>
-                    <button id="26">Z</button>
-                </div>
+        <!-- the hidden word the user need to find  -->
+            <div class="word-container"></div>
+            <div class="lettersGuessed"></div>
+    </div>
+        </div>
+        <!-- keyboard of all alphabets -->
+        <div class="keyboard">
+            <div class="row">
+                <button class="No. 1">A</button>
+                <button class="No. 2">B</button>
+                <button class="No. 3">C</button>
+                <button class="No. 4">D</button>
+                <button class="No. 5">E</button>
+                <button class="No. 6">F</button>
+                <button class="No. 7">G</button>
+                <button class="No. 8">H</button>
+                <button class="No. 9">I</button>
+                <button class="No. 10">J</button>
+                <button class="No. 11">K</button>
+                <button class="No. 12">L</button>
+                <button class="No. 13">M</button>
+                <button class="No. 14">N</button>
+                <button class="No. 15">O</button>
+                <button class="No. 16">P</button>
+                <button class="No. 17">Q</button>
+                <button class="No. 18">R</button>
+                <button class="No. 19">S</button>
+                <button class="No. 20">T</button>
+                <button class="No. 21">U</button>
+                <button class="No. 22">V</button>
+                <button class="No. 23">W</button>
+                <button class="No. 24">X</button>
+                <button class="No. 25">Y</button>
+                <button class="No. 26">Z</button>
             </div>
         </div>
-    </div>
+        
 
     <!-- popup which will appear once all the tries are complted -->
     <!-- it should either show successfull or not successfull -->
     <div class="popup">
-        <button class="popup-close1"><i class="fa-regular fa-circle-xmark"></i></button>
-        <button class="newgame"><i class="fa-solid fa-rotate-right"></i>New Game</button>
-        <p id="result-text"></p>
+        <div class="popuponl">
+            <button class="popup-close1"><i class="fa-regular fa-circle-xmark"></i></button>
+            <h3 class="win">Hi Welcome To Hangman Game!!!!</h3>
+            
+            <button class="newgame"><i class="fa-solid fa-play"></i>Start Game</button>
+            <p id="result-text"></p>
+        </div>
     </div>
 
-    
-    
-    
-    <!--Script-->
-    <script src="https://kit.fontawesome.com/1fa3530753.js" crossorigin="anonymous"></script>
+    <div class="popup1">
+        <div class="popupWin">
+            <button class="popup-close1"><i class="fa-regular fa-circle-xmark"></i></button>
+            <h3 class="win">YOU WIN !!!!</h3>
+            
+            <button class="newgame"><i class="fa-solid fa-rotate-right"></i>New Game</button>
+            <p id="result-text">Chosen Word :</p>
+        </div>
+    </div>
+
+    <div class="popup2">
+        <div class="popupLose">
+            <button class="popup-close1"><i class="fa-regular fa-circle-xmark"></i></button>
+            <h3 class="win">YOU LOSE !!!</h3>
+            <p>Chosen Word : </p>
+            
+            <button class="newgame"><i class="fa-solid fa-rotate-right"></i>New Game</button>
+            <p id="result-text"></p>
+        </div>
+    </div>    
+    <!--Script-->    
     <script src="hangman.js"></script>
     </body>
 </html>
