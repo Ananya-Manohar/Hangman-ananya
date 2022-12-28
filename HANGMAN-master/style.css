@@ -18,6 +18,7 @@ h2{
     color: rgb(160, 160, 146);
 
 }
+/*display of options*/
 .options-container{
     transform: scale(1);
     text-align: center;
@@ -39,7 +40,7 @@ h2{
     display: block;
     margin: 5px;
 }
-.options button:hover {
+.options button:hover,.login-button:hover {
     background-color: rgb(155, 145, 2);
 }
 /* centering the contents of the game container */
@@ -105,28 +106,69 @@ h2{
     margin: 0  0.5rem 0 0.5rem;
     
 }
-
+.popup1 , .popup2 {
+    display: none;
+}
 /* designing popup menu */
-.popup{
-    height: 25vh;
-    width: 25vw;
+.popup , .popup1 , .popup2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.333);
+    transform: scale(1);
+}
+.popupWin , .popupLose , .popuponl{
+    height: 200px;
+    width: 250px;
     position: absolute;
     background-color: rgb(145, 51, 228);
     left: 50%;
     top: 50%;
+    align-items: center;
+    text-align: center;
     transform: translate(-50% ,-50%);
-    border-radius: 5%;
+    border-radius: 10px;
     border: 3px solid black;
-    display: none
     
 }
-.popup.show{
+
+.popup p , .popup1 p , .popup2 p {
+    text-align: center;
+    font-weight: 400;
+    color: rgb(254, 242, 13);
+
+}
+.popup .newgame , .popup1 .newgame , .popup2 .newgame{
+    position: relative;
+    margin: auto;
+    padding: 10px 0;
+    color: #000;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
+    border:2px solid #000;
+    border-radius: 5px;
+    background: rgb(239, 239, 58);
+}
+.popup .newgame:hover , .popup1 .newgame:hover , .popup2 .newgame:hover{
+    background: rgb(183, 164, 0);
+}
+.popup .newgame i , .popup1 .newgame i , .popup2 .newgame i{
+    color: #000;
+    padding-right: 10px;
+    font-size: 15px;
+}
+.popup.show ,.popup1.show ,.popup2.show{
     display: contents;
 }
 .popup-close1, .popup-close2{
     /* padding: 1rem; */
     background:transparent;
-    margin-left: 94%;
+    margin-left: 92%;
     /* border-radius: 50%; */
     font-size: 1.2rem;
     cursor: pointer;
@@ -173,19 +215,13 @@ h2{
 .login input{
     font-size: 17px;
 }
-
 .popup-loginpop.show{
     transform: scale(1);
 }
-
 .popup-loginpop .login input{
     margin: 15px;
     color: #000;
 }
-
-
-
-
 background-color button.active {
     background-color: cadetblue;
     border: 3px solid #000;
@@ -195,11 +231,28 @@ span {
     color: yellow;
     font-weight: 400;
 }
-.popup-close1 i ,.popup-close2 i:hover{
+.popup-close1 i:hover ,.popup-close2 i:hover{
     color: red;
 }
 svg{
-    transform: scale(0);
+    transform: scale();
+}
+.options-container button.disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #808080;
+}
+.options-container button.active{
+    background-color: rgb(218, 236, 22);
+    color: #000;
+    border: 2px solid #000;
+}
+.word{
+    background-color: rgb(255, 0, 144);
+    border: 2px solid #000;
+    height: 300px;
+    width: 900px;
+    border-radius: 10px;
 }
 
 
