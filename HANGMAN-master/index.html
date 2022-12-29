@@ -54,10 +54,13 @@
                 <line id = "try10"  x1="140" y1="150" x2="160" y2="180" class="figure-part" stroke="black" stroke-width="3" /> 
             </svg>
                     
-        <div class="word"></div>
-        <!-- the hidden word the user need to find  -->
-            <div class="word-container"></div>
+        <div class="word">
+            <!-- the hidden word the user need to find  -->
+            <h1></h1>
+            <div class="word-container"><h2>_ _ _ _ _</h2></div>
             <div class="lettersGuessed"></div>
+        </div>
+        
     </div>
         </div>
         <!-- keyboard of all alphabets -->
@@ -97,8 +100,10 @@
     <!-- it should either show successfull or not successfull -->
     <div class="popup">
         <div class="popuponl">
-            <button class="popup-close1"><i class="fa-regular fa-circle-xmark"></i></button>
+            <!--<button class="popup-close1"><i class="fa-regular fa-circle-xmark"></i></button>-->
+            <br>
             <h3 class="win">Hi Welcome To Hangman Game!!!!</h3>
+            <br>
             
             <button class="newgame"><i class="fa-solid fa-play"></i>Start Game</button>
             <p id="result-text"></p>
