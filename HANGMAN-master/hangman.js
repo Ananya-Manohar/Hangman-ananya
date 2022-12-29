@@ -35,6 +35,7 @@ optionsContainer = document.querySelector(".options-container"),
 lettersContainer = document.querySelector(".keyboard"),
 wordContainer = document.querySelector(".word-container"),
 closeIcon = document.querySelector(".popup-close2");
+//optionsButtons = document.querySelectorAll(".options button");
 
 
 
@@ -55,29 +56,58 @@ const displayOptions = () => {
 
     optionsContainer.appendChild(buttonCon);
 };
+
 //blocking the options
 const blocker = () => {
-    let optionButtons = document.querySelectorAll(".options button");
+   let optionButtons = document.querySelectorAll(".options button");
 
     optionButtons.forEach((button) => {
         button.disabled = true;
-    })
+    });
 }
+
+//getting a random word from the array
+
+//function getrndmword(min , max) {
+
+  //  let step1 = max - min + 1;
+   // let step2 = Math.random() * step1;
+    //let result = Math.floor(step2) + min;
+    //return result;
+
+//}
+
+//let result = document.querySelector(".word h1");
+
+//optionsButtons.addEventListener("click" , () => {
+
+  //  let index = getrndmword(0 , generateWord.length-1);
+   // result.innerText = generateWord[index];
+
+//});
+
+//generating a random number
+//  let index =
+
+
 const generateWord = (optionValue) => {
-    let optionButtons = document.querySelectorAll(".options button");
+   let optionButtons = document.querySelectorAll(".options button");
 
     optionButtons.forEach((button) => {
         if(button.innerText.toLowerCase() === optionValue) {
-            button.classList.add("active");
+            button.classList.add(".active");
         }
         button.disabled = true;
     });
 };
+document.querySelector(".word-container h2").innerHTML = "_" * generateWord.length;
 
 const initializer = () => {
+
     displayOptions();
 }
 window.onload = initializer;
+
 loginBtn.addEventListener("click" , () => {
 
     popupLogin.classList.add("show");
@@ -93,12 +123,10 @@ closebtn.addEventListener("click" , () => {
     popupLogin.classList.remove("show");
 });
 
-
-
 //New Game Container popup
-document.querySelector(".popuponl .popup-close1").addEventListener("click" , () => {
-    document.querySelector(".popup").style.display = "none";
-});
+//document.querySelector(".popuponl .popup-close1").addEventListener("click" , () => {
+  //  document.querySelector(".popup").style.display = "none";
+//});
 
 document.querySelector(".popuponl .newgame").addEventListener("click" , () => {
     document.querySelector(".popup").style.display = "none";
