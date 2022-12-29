@@ -7,7 +7,7 @@
 
 /* background color */
 body{
-    background-image: linear-gradient( to right ,purple ,rgb(176, 59, 151));
+    background-image: radial-gradient( circle ,rgb(99, 0, 99) ,rgb(234, 10, 186));
 }
 
 /* aligning all headings to center */
@@ -237,12 +237,12 @@ span {
 svg{
     transform: scale();
 }
-.options-container button.disabled {
-    border: 3px solid #808080;
+.options-container .options button:disabled {
+    border: 3px solid #393939;
     color: #808080;
-    background-color: #808080;
+    background-color: #b3b3b3;
 }
-.options-container button.active{
+.options-container .options button.active{
     background-color: rgb(218, 236, 22);
     color: #000;
     border: 2px solid #000;
