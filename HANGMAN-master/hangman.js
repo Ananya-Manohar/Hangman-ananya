@@ -32,29 +32,12 @@ popup = document.querySelector(".popup"),
 closebtn = document.querySelector(".popup-close1"),
 figure = document.querySelector("svg"),
 optionsContainer = document.querySelector(".options-container"),
-keys = document.querySelector(".keyboard button"),
 lettersContainer = document.querySelector(".keyboard"),
 wordContainer = document.querySelector(".word-container"),
 closeIcon = document.querySelector(".popup-close2");
 
-keys.addEventListener("click" , (keyValue) => {
-    keys.forEach((button) => {
-        if(button.innerText.toLowerCase() === keyValue) {
-            wordContainer.Write(keyValue);
-        }
-    });
-});
 
-const generateWord = (optionValue) => {
-    let optionButtons = document.querySelectorAll(".options");
 
-    optionButtons.forEach((button) => {
-        if(button.innerText.toLowerCase() === optionValue) {
-            button.classList.add("active");
-        }
-        button.disabled = true;
-    });
-};
 /*
 let randNum = Math.floor(Math.random() * generateWord.length);
 let chosenWord = generateWord[randNum];
@@ -71,6 +54,24 @@ const displayOptions = () => {
     }
 
     optionsContainer.appendChild(buttonCon);
+};
+//blocking the options
+const blocker = () => {
+    let optionButtons = document.querySelectorAll(".options button");
+
+    optionButtons.forEach((button) => {
+        button.disabled = true;
+    })
+}
+const generateWord = (optionValue) => {
+    let optionButtons = document.querySelectorAll(".options button");
+
+    optionButtons.forEach((button) => {
+        if(button.innerText.toLowerCase() === optionValue) {
+            button.classList.add("active");
+        }
+        button.disabled = true;
+    });
 };
 
 const initializer = () => {
@@ -122,15 +123,12 @@ document.querySelector(".popupLose .newgame").addEventListener("click" , () => {
 //Getting the value of the key that is pressed on the keyboard
 
 
-const output = document.querySelector(".lettersGuessed");
-const input = document.querySelector(".keyboard button");
+const keys = document.querySelector(".No");
 
-
-input.addEventListener('keydown' , (e) => {
-    for(e.keycode ; 65 <= e.keycode <= 90; e.keycode++){
-        if(input === e.keycode){
-            output.Write(e.keyValue);
+keys.addEventListener("click" , (keyValue) => {
+    keys.forEach((button) => {
+        if(button.innerText.toLowerCase() === keyValue) {
+            wordContainer.Write(keyValue);
         }
-        
-    }
+    });
 });
