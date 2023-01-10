@@ -10,15 +10,16 @@
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <p class="loginSignup-button">
+    <a class="loginSignup-button" href="login.html">
          <!-- <span class="login-button">Login</span> / <span class="signup-button">Signup</span> -->
-        </p>
+    </a>
     
-    <!-- heading -->
-    <h1>HANG MAN</h1>
+    
 
     <!-- body of the game -->
     <div class="game_container">
+        <!-- heading -->
+        <h1>HANG MAN</h1>
         <div class="figure-keyboard">
             <!-- svg for making the hanging man body -->
             <svg class="figure-container">
@@ -37,7 +38,7 @@
                 <!-- Legs -->
                 <line x1="140" y1="150" x2="120" y2="180" class="try5 figure-part"/>
                 <line x1="140" y1="150" x2="160" y2="180" class="try6 figure-part"/>
-            </svg>
+            </svg><br><br>
             <!-- keyboard of all alphabets -->
             <div class="keyboard">
                 <div class="row">
@@ -85,58 +86,11 @@
             <h3>wrong letters</h4>
             <p class="wrongLetterList"></p>
         </div>
+        <!--<button class="stopB">stop</button>-->
     </div>
 
-    <div class="bgModel">
-    <!-- popup for login -->
-    <form class="popup loginpop">
-        <button class="popup-close">x</button>
-        <span>Username : </span>
-        
-        <input type="text" name="username" id="userName" required>
-        <br>
-        <span>password : </span>
-        <input type="password" name="" id="password" required>
-        <button type="submit" class="submitButton loginSubmitButton"> Submit</button>
-        <p class="signupLink">Create new account ?</p>
-    </form>
+    
 
-
-    <!-- popup for signup -->
-        <form class="popup signuppop">
-            <button class="popup-close">x</button>
-
-            <span>First name : </span>
-            <input type="text" name="firstName" id="fname" required>
-            <br>
-
-            <span>Last name : </span>
-            <input type="text" name="lastName" id="lname" required>
-            <br>
-
-            <span>E-Mail : </span>
-            <input type="email" name="Email" id="email" required>
-            <br>
-
-            <span>Username : </span>
-            <input type="text" name="username" id="UserName" required>
-            <br>
-
-            <span>password : </span>
-            <input type="password" name="Passw" id="passworddec" required>
-            <br>
-
-            <span>Confirm Password : </span>
-            <input type="password" name="ConfPassw" id="confpassword" required>
-
-            <button type="submit" class="submitButton signupSubmitButton"> Submit</button>
-            <p class="loginLink">Already have an account ?</p>
-            
-        </form>
-    </div> 
-
-    <button class="stopB">stop</button>
-
-    <script type="text/javascript" src="script.js"></script>
+    <script rel="script" src="script.js"></script>
 </body>
 </html>
