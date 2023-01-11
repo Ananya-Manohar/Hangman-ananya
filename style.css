@@ -178,8 +178,8 @@ svg {
     font-size: 1.2rem;
 }
 
-.loginSignup-button span:hover{
-    color: rgb(255, 174, 0);
+.loginSignup-button a:hover{
+    color: white;
 }
 
 #multi{
