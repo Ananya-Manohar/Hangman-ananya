@@ -6,7 +6,7 @@
 }
   /* background color */
 body {
-    background-color: #ee9134;
+    background-image: radial-gradient(rgb(255, 196, 0) , rgb(255, 174, 0));
 }
 
 /* aligning all headings to center */
@@ -26,7 +26,17 @@ h1 {
     stroke : #000000;
     stroke-width : 3;
 }
-
+a {
+    text-decoration: none;
+    color: #000;
+}
+.button {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #000;
+}
 
 /* designing keyboard of all alphabets */
 /*.keyboard{
@@ -85,7 +95,7 @@ svg {
 
 /* designing the key when it turns out to be right */
 .rightLetter{
-    background-color: rgb(4, 255, 247);
+    background-color: rgb(255, 201, 4);
     color: white;
 }
 
@@ -179,6 +189,6 @@ svg {
 }
 
 .loginSignup-button span:hover{
-    color: rgb(255, 255, 255);
+    color: rgb(255, 174, 0);
 }
 
