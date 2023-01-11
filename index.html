@@ -9,13 +9,12 @@
     
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <button class = "button"><a class="loginSignup-button" href="login.html"></button>
-         <!-- <span class="login-button">Login</span> / <span class="signup-button">Signup</span> -->
-    </a>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <nav>
+        <p class = "loginSignup-button"></p>
+    </nav>
     
     
-
     <!-- body of the game -->
     <div class="game_container">
         <!-- heading -->
@@ -78,19 +77,17 @@
 
         <!-- the hidden word the user need to find  -->
         <div class="word">
-
         </div>
         
-        <!-- shows all letters that has been tried and turned out to be wrong -->
-        <div class="wrong words">
-            <h3>wrong letters</h4>
-            <p class="wrongLetterList"></p>
-        </div>
         <!--<button class="stopB">stop</button>-->
     </div>
+    <button id="multi">Multiplayer</button>
+    <!-- <div class="bgModel">
+    <form class="popup loginpop">
+    </form>
 
-    
+    </div>  -->
 
-    <script rel="script" src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
