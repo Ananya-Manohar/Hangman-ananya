@@ -26,6 +26,7 @@ h1 {
     stroke : #000000;
     stroke-width : 3;
 }
+
 a {
     text-decoration: none;
     color: #000;
@@ -64,10 +65,8 @@ a {
     background: #fff;
     max-width: 545px;
     width: 1800px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
     padding: 30px;
     border-radius: 15px;
     border:2px solid #000;
@@ -99,32 +98,23 @@ svg {
     color: white;
 }
 
-/* designing the wrong letter listed */
-.wrongLetterList{
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-
-.stopB {
-    background-color: rgb(89, 5, 167);
-    padding: 10px;
-    margin: 0 40%;   
-}
-
-
 /* designing the slot for unknown word */
 .word{
     text-align: center;
-    margin-bottom: 6vh ;
+    /* margin: 15px; */
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.word p{
+    margin: 15px 10px;
 }
 .letter{
-    border-bottom: 3px solid white;
-    padding: 1rem;
+    border-bottom: 3px solid black;
+    padding: 0.6rem;
     box-sizing: border-box;
     margin: 0  0.5rem 0 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -182,13 +172,25 @@ svg {
 
 /* styling the login/submit button of the forms */
 .loginSignup-button{
-    text-align: right;
-    margin-right: 2px;
+    /* text-align: right; */
+    margin: 10px;
     cursor: pointer;
     font-size: 1.2rem;
 }
 
-.loginSignup-button span:hover{
-    color: rgb(255, 174, 0);
+.loginSignup-button a:hover{
+    color: white;
 }
 
+#multi{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: fit-content;
+    padding: 7px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+
+}
