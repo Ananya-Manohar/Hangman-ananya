@@ -126,18 +126,7 @@ svg {
 }
 /* designoing popup menu */
 
-.bgModel{
-    background-color: rgba(0, 0, 0 ,0.7);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-}
+
 .popup{
     width: 25vw;
     background-color: rgb(145, 51, 228);
